@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
     purge: [
         './storage/framework/views/*.php',
@@ -5,7 +6,17 @@ module.exports = {
         './resources/js/**/*.vue',
     ],
 
-    theme: {},
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+            },
+            screens: {
+                'dark': {'raw': '(prefers-color-scheme: dark)'},
+                // => @media (prefers-color-scheme: dark) { ... }
+            }
+        },
+    },
 
     variants: {
         opacity: ['responsive', 'hover', 'focus', 'disabled'],

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 /*
@@ -14,7 +16,13 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return Inertia::render('Welcome', [
+        'hasLogin' => Route::has('login'),
+        'hasRegister' => Route::has('register'),
+        'checkAuth' => Auth::check(),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
 });
 
 Auth::routes();
