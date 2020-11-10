@@ -2,13 +2,6 @@
 
 _VILT Is A Laravel Boilerplate_ provides a very flexible and extensible way of building your custom Laravel applications.
 
-## Table of Contents
-
-- [Features](#features)
-- [System Requirements](#system-requirements)
-- [Installation](#installation)
-- [License](#license)
-
 ## Features
 - Responsive
 - Tailwin CSS
