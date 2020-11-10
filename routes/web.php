@@ -36,7 +36,7 @@ Route::get('/email/verify', function () {
 Route::get('/confirm-password', function () {
     return view('auth.confirm-password');
 })->middleware(['auth'])->name('password.confirm');
-Auth::routes();
 */
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
