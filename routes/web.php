@@ -25,6 +25,18 @@ Route::get('/', function () {
     ]);
 });
 
+/*
+* For Verification User
+Auth::routes(['verify' => true]);
+Route::get('/email/verify', function () {
+    return Inertia::render('Auth/Verify');
+})->middleware(['auth'])->name('verification.notice');
+
+* For Confirms Passwords
+Route::get('/confirm-password', function () {
+    return view('auth.confirm-password');
+})->middleware(['auth'])->name('password.confirm');
 Auth::routes();
+*/
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
