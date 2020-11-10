@@ -47,7 +47,7 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return Inertia::render('Auth/LoginPage', [
+        return Inertia::render('Auth/Login', [
             'canResetPassword' => Route::has('password.request'),
             'status' => session('status'),
         ]);

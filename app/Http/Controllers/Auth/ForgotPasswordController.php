@@ -28,6 +28,6 @@ class ForgotPasswordController extends Controller
      */
     public function showLinkRequestForm()
     {
-        return Inertia::render('Auth/ForgotPasswordPage');
+        return Inertia::render('Auth/Passwords/Email');
     }
 }
